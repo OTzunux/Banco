@@ -14,7 +14,22 @@ public class SistemaBanco {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        Cliente cliente1 = new Cliente("Juan Pérez", "12345678", "San Juan Sac");
+        Cliente cliente2 = new Cliente("Ana López", "87654321", "San Pedro Sac");
+
+        CuentaBancaria cuenta1 = new CuentaBancaria("001", cliente1);
+        CuentaBancaria cuenta2 = new CuentaBancaria("002", cliente2);
+
+        Banco banco = new Banco("Banco Central");
+        banco.agregarCuenta(cuenta1);
+        banco.agregarCuenta(cuenta2);
+
+        cuenta1.depositar(500);
+        cuenta1.retirar(200);
+        cuenta2.depositar(1000);
+        cuenta2.retirar(1200);
+
+        banco.mostrarCuentas();
     }
     
 }
