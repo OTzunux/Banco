@@ -8,6 +8,6 @@ package banco;
  *
  * @author Farasi
  */
-public class Banco {
+public class CuentaBancaria {
     
 }
